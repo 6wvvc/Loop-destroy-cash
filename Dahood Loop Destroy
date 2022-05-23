@@ -1,0 +1,11 @@
+						for i,Child in pairs(workspace.Ignored.Drop:GetChildren()) do
+							Child.Transparency = 1
+							for i,FX in pairs(Child:GetChildren()) do
+								if FX:IsA("Decal") then
+									FX:Destroy() 
+								end
+								if FX:IsA("BillboardGui") then
+									FX.Enabled = false
+								end 
+							end
+						end
